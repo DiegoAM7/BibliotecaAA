@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">BibliotecaAA</string>
+
+    // Null
+    <string name="nd">Null</string>
+
+    // Menu
+    <string name="menuHome">Inicio</string>
+    <string name="menuBook">Libros</string>
+    <string name="menuAuthor">Autores</string>
+    <string name="menuEditorial">Editoriales</string>
+    <string name="menuBookcase">Estanterias</string>
+
+    // Author
+    <string name="btnCreateAuthor">Crear Autor</string>
+
+    // Bookcase
+    <string name="btnCreateBookcase">Crear Estantería</string>
+
+    // Editorial
+    <string name="btnCreateEditorial">Crear Editorial</string>
+</resources>

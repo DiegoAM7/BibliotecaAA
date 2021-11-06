@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/itemMenuHome"
+        android:icon="@drawable/ic_home_24"
+        android:title="@string/menuHome" />
+    <item
+        android:id="@+id/itemMenuBook"
+        android:icon="@drawable/ic_book_24"
+        android:title="@string/menuBook" />
+    <item
+        android:id="@+id/itemMenuAuthor"
+        android:icon="@drawable/ic_author_24"
+        android:title="@string/menuAuthor" />
+    <item
+        android:id="@+id/itemMenuEditorial"
+        android:icon="@drawable/ic_editorial_24"
+        android:title="@string/menuEditorial" />
+    <item
+        android:id="@+id/itemMenuBookcase"
+        android:icon="@drawable/ic_bookcase_24"
+        android:title="@string/menuBookcase" />
+</menu>
