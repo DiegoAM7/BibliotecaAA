@@ -13,6 +13,12 @@
 
     // Author
     <string name="btnCreateAuthor">Crear Autor</string>
+    <string name="hintNames">Nombres</string>
+    <string name="hintLastnames">Apellidos</string>
+    <string name="hintNationality">Nacionalidad</string>
+
+    // Book
+    <string name="btnCreateBook">Crear Libro</string>
 
     // Bookcase
     <string name="btnCreateBookcase">Crear Estantería</string>

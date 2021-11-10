@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BibliotecaAA">
         <activity
+            android:name=".activities.Author.EditAuthorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Author.CreateAuthorActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.Editorial.EditorialActivity"
             android:exported="false" />
         <activity
