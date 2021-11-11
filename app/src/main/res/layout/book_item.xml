@@ -12,6 +12,8 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,29 +21,76 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="#7986CB">
+
+            <TextView
+                android:id="@+id/txtLabelBookcase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FFC107"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="0dp"
+                android:paddingBottom="5dp"
+                android:text="@string/labelBookcase"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/txtBookBookcase"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/txtBookBookcase"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="#FFC107"
                 android:paddingLeft="10dp"
                 android:paddingTop="5dp"
                 android:paddingRight="10dp"
                 android:paddingBottom="5dp"
                 android:text="@string/nd"
+                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtLabelTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/labelTitle"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtLabelBookcase" />
 
             <TextView
                 android:id="@+id/txtBookTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
                 android:text="@string/nd"
-                app:layout_constraintEnd_toStartOf="@+id/txtBookBookcase"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toStartOf="@+id/txtLabelBookcase"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/txtLabelTitle"
+                app:layout_constraintTop_toBottomOf="@+id/txtLabelBookcase"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/txtLabelDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/labelDescription"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/txtLabelTitle" />
 
             <TextView
                 android:id="@+id/txtBookDescription"
@@ -51,78 +100,145 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="24dp"
                 android:text="@string/nd"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/txtLabelDescription"
+                app:layout_constraintTop_toBottomOf="@+id/txtLabelTitle"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/txtLabelAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/labelAuthor"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtBookTitle" />
+                app:layout_constraintTop_toBottomOf="@+id/txtLabelDescription" />
 
             <TextView
                 android:id="@+id/txtBookAuthor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="200dp"
+                android:layout_marginEnd="24dp"
                 android:text="@string/nd"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/txtLabelAuthor"
+                app:layout_constraintTop_toBottomOf="@+id/txtLabelDescription"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/txtLabelPublishDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/labelPublishDate"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtBookDescription" />
+                app:layout_constraintTop_toBottomOf="@+id/txtLabelAuthor" />
 
             <TextView
                 android:id="@+id/txtBookPublishDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="24dp"
                 android:text="@string/nd"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/txtBookAuthor"
-                app:layout_constraintTop_toBottomOf="@+id/txtBookDescription" />
+                app:layout_constraintStart_toEndOf="@+id/txtLabelPublishDate"
+                app:layout_constraintTop_toBottomOf="@+id/txtLabelAuthor"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/txtLabelEditorial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/labelEditorial"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtLabelPublishDate" />
 
             <TextView
                 android:id="@+id/txtBookEditorial"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="24dp"
-                android:layout_marginBottom="16dp"
                 android:text="@string/nd"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/txtLabelEditorial"
+                app:layout_constraintTop_toBottomOf="@+id/txtLabelPublishDate"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/txtLabelPages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/labelPages"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/txtBookPages"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtBookAuthor" />
+                app:layout_constraintTop_toBottomOf="@+id/txtLabelEditorial" />
 
             <TextView
                 android:id="@+id/txtBookPages"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="24dp"
                 android:layout_marginBottom="16dp"
                 android:text="@string/nd"
+                android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/txtBookReplicas"
-                app:layout_constraintStart_toEndOf="@+id/txtBookEditorial"
-                app:layout_constraintTop_toBottomOf="@+id/txtBookAuthor" />
+                app:layout_constraintStart_toEndOf="@+id/txtLabelPages"
+                app:layout_constraintTop_toBottomOf="@+id/txtLabelEditorial"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/txtLabelReplicas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/labelReplicas"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtBookReplicas" />
 
             <TextView
                 android:id="@+id/txtBookReplicas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginEnd="80dp"
                 android:layout_marginBottom="16dp"
                 android:text="@string/nd"
+                android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/txtBookPages"
-                app:layout_constraintTop_toBottomOf="@+id/txtBookAuthor" />
+                tools:ignore="TextContrastCheck" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

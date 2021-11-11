@@ -64,11 +64,11 @@ public class DbAuthors extends DbHelper {
         author.setNationality(cursor.getString(3));
         authors.add(author);
       } while (cursor.moveToNext());
-
-      return authors;
     } else {
-      return null;
+      authors = null;
     }
+
+    return authors;
   }
 
   public int edit(Author author) {

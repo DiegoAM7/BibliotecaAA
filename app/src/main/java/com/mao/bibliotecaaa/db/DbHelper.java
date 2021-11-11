@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 
 public class DbHelper extends SQLiteOpenHelper {
   protected static final String DB_NAME = "biblioteca";
-  protected static final int DB_VERSION = 1;
+  protected static final int DB_VERSION = 2;
 
   protected Context context;
 
@@ -59,13 +59,13 @@ public class DbHelper extends SQLiteOpenHelper {
             + "description TEXT NOT NULL,"
             + "publication_date TEXT NOT NULL,"
             + "replicas INTEGER NOT NULL,"
-            + "pages INTEGER NOT NULL, "
+            + "pages INTEGER NOT NULL,"
             + "author_id INTEGER NOT NULL,"
             + "editorial_id INTEGER NOT NULL,"
             + "bookcase_id INTEGER NOT NULL,"
             + "FOREIGN KEY (author_id) REFERENCES authors(id),"
             + "FOREIGN KEY (editorial_id) REFERENCES editorials(id),"
-            + "FOREIGN KEY (bookcase_id) REFERENCES bookcases(id) )");
+            + "FOREIGN KEY (bookcase_id) REFERENCES bookcases(id))");
   }
 
   @Override

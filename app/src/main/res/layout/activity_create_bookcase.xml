@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.Author.CreateAuthorActivity">
+    tools:context=".activities.Bookcase.CreateBookcaseActivity">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/etxtAuthorNamesBox"
+        android:id="@+id/etxtBookcaseLetterBox"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,16 +15,18 @@
         android:layout_marginTop="100dp"
         android:layout_marginEnd="72dp"
         android:ems="10"
-        android:hint="@string/hintNames"
+        android:hint="@string/hintLetter"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etxtAuthorNames"
+            android:id="@+id/etxtBookcaseLetter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:ignore="TextContrastCheck" />
@@ -32,7 +34,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/etxtAuthorLastnamesBox"
+        android:id="@+id/etxtBookcaseNumberBox"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -40,16 +42,16 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="72dp"
         android:ems="10"
-        android:hint="@string/hintLastnames"
+        android:hint="@string/hintNumber"
         android:importantForAutofill="no"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxtAuthorNamesBox">
+        app:layout_constraintTop_toBottomOf="@+id/etxtBookcaseLetterBox">>
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etxtAuthorLastnames"
+            android:id="@+id/etxtBookcaseNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:ignore="TextContrastCheck" />
@@ -57,7 +59,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/etxtAuthorNationalityBox"
+        android:id="@+id/etxtBookcaseColorBox"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -65,16 +67,17 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="72dp"
         android:ems="10"
-        android:hint="@string/hintNationality"
+        android:hint="@string/hintColor"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxtAuthorLastnamesBox">
+        app:layout_constraintTop_toBottomOf="@+id/etxtBookcaseNumberBox">>
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etxtAuthorNationality"
+            android:id="@+id/etxtBookcaseColor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:ignore="TextContrastCheck" />
@@ -82,14 +85,15 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btnCreateAuthorSave"
+        android:id="@+id/btnCreateBookcaseSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginBottom="100dp"
-        android:text="@string/btnCreateAuthor"
+        android:text="@string/btnCreateBookcase"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxtAuthorNationalityBox" />
+        app:layout_constraintTop_toBottomOf="@+id/etxtBookcaseColorBox" />
 </androidx.constraintlayout.widget.ConstraintLayout>

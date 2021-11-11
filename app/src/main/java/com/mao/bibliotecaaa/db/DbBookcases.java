@@ -64,11 +64,11 @@ public class DbBookcases extends DbHelper {
         bookcase.setColor(cursor.getString(3));
         bookcases.add(bookcase);
       } while (cursor.moveToNext());
-
-      return bookcases;
     } else {
-      return null;
+      bookcases = null;
     }
+
+    return bookcases;
   }
 
   public int edit(Bookcase bookcase) {

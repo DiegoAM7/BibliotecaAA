@@ -54,4 +54,9 @@ public class Bookcase implements Serializable {
   public void setColor(String color) {
     this.color = color;
   }
+
+  @Override
+  public String toString() {
+    return letter + number + " - " + color;
+  }
 }

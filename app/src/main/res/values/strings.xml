@@ -1,8 +1,13 @@
 <resources>
     <string name="app_name">BibliotecaAA</string>
+    <string name="hintFilter">Buscar…</string>
 
     // Null
     <string name="nd">Null</string>
+
+    // Repeat
+    <string name="hintNationality">Nacionalidad</string>
+    <string name="edit">Editar</string>
 
     // Menu
     <string name="menuHome">Inicio</string>
@@ -15,14 +20,54 @@
     <string name="btnCreateAuthor">Crear Autor</string>
     <string name="hintNames">Nombres</string>
     <string name="hintLastnames">Apellidos</string>
-    <string name="hintNationality">Nacionalidad</string>
 
     // Book
     <string name="btnCreateBook">Crear Libro</string>
+    <string name="hintTitle">Titulo</string>
+    <string name="hintDescription">Descripción</string>
+    <string name="hintPublicacion">Fecha Publicación "DD/MM/AAAA"</string>
+    <string name="hintReplicas">Copias</string>
+    <string name="hintPages">Paginas</string>
+    <string name="txtAuthorT">Seleccione autor:</string>
+    <string name="txtEditorialT">Seleccione editorial:</string>
+    <string name="txtBookcaseT">Seleccione estantería:</string>
 
     // Bookcase
     <string name="btnCreateBookcase">Crear Estantería</string>
+    <string name="hintLetter">Letra</string>
+    <string name="hintNumber">Numero</string>
+    <string name="hintColor">Color</string>
 
     // Editorial
     <string name="btnCreateEditorial">Crear Editorial</string>
+    <string name="hintName">Nombre</string>
+
+    // Validaciones
+    <string name="empty">Campo vacío</string>
+    <string name="number">Solo números</string>
+    <string name="date">Formato no válido</string>
+
+    /* Items */
+    // Author
+    <string name="labelNames">Nombres:</string>
+    <string name="labelLastnames">Apellidos:</string>
+    <string name="labelNationality">Nacionalidad:</string>
+
+    // Book
+    <string name="labelBookcase">Estantería:</string>
+    <string name="labelTitle">Titulo:</string>
+    <string name="labelDescription">Descripción:</string>
+    <string name="labelAuthor">Autor:</string>
+    <string name="labelPublishDate">Fecha Publicación:</string>
+    <string name="labelEditorial">Editorial:</string>
+    <string name="labelPages">N° Páginas:</string>
+    <string name="labelReplicas">N° Copias:</string>
+
+    // Bookcase
+    <string name="labelLetter">Letra:</string>
+    <string name="labelNumber">Número:</string>
+    <string name="labelColor">Color:</string>
+
+    // Editorial
+    <string name="labelName">Nombre:</string>
 </resources>

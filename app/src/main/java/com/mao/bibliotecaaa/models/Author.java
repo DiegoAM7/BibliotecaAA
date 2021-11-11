@@ -54,4 +54,9 @@ public class Author implements Serializable {
   public void setNationality(String nationality) {
     this.nationality = nationality;
   }
+
+  @Override
+  public String toString() {
+    return names + " " + lastnames;
+  }
 }

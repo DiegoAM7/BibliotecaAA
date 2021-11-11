@@ -43,4 +43,9 @@ public class Editorial implements Serializable {
   public void setNationality(String nationality) {
     this.nationality = nationality;
   }
+
+  @Override
+  public String toString() {
+    return name;
+  }
 }

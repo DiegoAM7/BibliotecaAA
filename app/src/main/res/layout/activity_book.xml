@@ -16,7 +16,9 @@
         app:layout_constraintBottom_toTopOf="@+id/recyclerBook"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:icon="@drawable/ic_add_24"
+        style="@style/Widget.MaterialComponents.Button.Icon"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerBook"

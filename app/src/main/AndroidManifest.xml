@@ -10,6 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BibliotecaAA">
         <activity
+            android:name=".activities.Book.EditBookActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Book.CreateBookActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Editorial.EditEditorialActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Editorial.CreateEditorialActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Bookcase.EditBookcaseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Bookcase.CreateBookcaseActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.Author.EditAuthorActivity"
             android:exported="false" />
         <activity

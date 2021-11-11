@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,7 +17,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.mao.bibliotecaaa.R;
 import com.mao.bibliotecaaa.activities.Author.EditAuthorActivity;
 import com.mao.bibliotecaaa.db.DbAuthors;
+import com.mao.bibliotecaaa.db.DbBooks;
 import com.mao.bibliotecaaa.models.Author;
+import com.mao.bibliotecaaa.models.Book;
 
 import java.util.ArrayList;
 
@@ -83,6 +86,20 @@ public class AuthorAdapter extends RecyclerView.Adapter<AuthorAdapter.ViewHolder
         });
   }
 
+  public boolean inUse(Context context, Author author){
+    // Comprobar que no este en uso
+    DbBooks books = new DbBooks(context);
+    ArrayList<Book> booksList = books.getBooks();
+
+    for (Book book : booksList) {
+      if (book.getAuthor().getId() == author.getId()) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
   public void alert(Context context, Author author) {
     AlertDialog.Builder alert = new AlertDialog.Builder(context);
     alert.setTitle("¿Eliminar autor?");
@@ -93,11 +110,17 @@ public class AuthorAdapter extends RecyclerView.Adapter<AuthorAdapter.ViewHolder
           @SuppressLint("NotifyDataSetChanged")
           @Override
           public void onClick(DialogInterface dialog, int which) {
-            authors.remove(author);
-            DbAuthors dbAuthors = new DbAuthors(context);
-            dbAuthors.delete(author);
+            boolean used = inUse(context, author);
 
-            notifyDataSetChanged();
+            if (!used) {
+              authors.remove(author);
+              DbAuthors dbAuthors = new DbAuthors(context);
+              dbAuthors.delete(author);
+
+              notifyDataSetChanged();
+            } else {
+              Toast.makeText(context, "No es posible eliminar al autor, ya que, se encuentra en uso", Toast.LENGTH_LONG).show();
+            }
           }
         });
     alert.setNegativeButton("Cancelar", null);

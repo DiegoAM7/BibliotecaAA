@@ -100,11 +100,11 @@ public class DbBooks extends DbHelper {
 
         books.add(book);
       } while (cursor.moveToNext());
-
-      return books;
     } else {
-      return null;
+      books = null;
     }
+
+    return books;
   }
 
   public int edit(Book book) {

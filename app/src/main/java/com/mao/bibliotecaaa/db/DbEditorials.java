@@ -61,11 +61,11 @@ public class DbEditorials extends DbHelper {
         editorial.setNationality(cursor.getString(2));
         editorials.add(editorial);
       } while (cursor.moveToNext());
-
-      return editorials;
     } else {
-      return null;
+      editorials = null;
     }
+
+    return editorials;
   }
 
   public int edit(Editorial editorial) {
